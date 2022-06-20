@@ -15,7 +15,7 @@ include_directories(include
 
 add_library(hello SHARED src/hello.cpp)
 add_executable(sayHello useHello.cpp)
-target_link_libraries(sayHello hello glog gflags)
+target_link_libraries(sayHello hello glog gflags gtest)
 
 #set(CMAKE_INSTALL_PREFIX /usr/local)
 #install(TARGETS hello

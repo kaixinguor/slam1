@@ -5,10 +5,11 @@
 
 DECLARE_int32(print_times);
 
-void sayHello() {
+int sayHello() {
     //std::cout<<"Hello SLAM"<<std::endl;
 
     for(int i=0; i<FLAGS_print_times;i++) {
         LOG(INFO)<<"Hello SLAM";
     }
+    return FLAGS_print_times;
 }
