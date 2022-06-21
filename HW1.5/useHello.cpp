@@ -30,10 +30,10 @@ int main( int argc, char** argv ) {
     google::InitGoogleLogging(argv[0]);
     FLAGS_log_dir = "./";
 
-    LOG(INFO) << "LOG";
+    LOG(INFO) << "glog start";
+    sayHello();
   
-    //EXPECT_EQ(sayHello(),1);
-    //EXPECT_EQ(sayHello(),5) << "FAILED: EXPECT: 5, but give 5";
+    LOG(INFO) << "gtest start";
     testing::InitGoogleTest(&argc, argv);
     int test_status = RUN_ALL_TESTS(); 
     google::ShutdownGoogleLogging();
